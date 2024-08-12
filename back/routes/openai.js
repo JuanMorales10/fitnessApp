@@ -18,7 +18,7 @@ router.post('/generate', async (req, res) => {
             const response = await axios.post('https://api.openai.com/v1/chat/completions', {
                 model: 'gpt-4-turbo', 
                 messages: [{ role: 'user', content: prompt }],
-                max_tokens: 800
+                max_tokens: 1200
             }, {
                 headers: {
                     'Authorization': `Bearer ${OPENAI_API_KEY}`,
