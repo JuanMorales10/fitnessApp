@@ -1,0 +1,214 @@
+
+.create-workout-container {
+    position: relative;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-image: url('../../assets/img/pexels-victorfreitas-703016.avif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.create-workout-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Overlay oscuro con opacidad */
+    backdrop-filter: blur(2px); /* Difuminado */
+    z-index: 1;
+}
+
+.fo {
+    position: relative;
+    z-index: 2;
+    border-radius: 12px;
+    max-width: 600px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espacio entre las "nubes" */
+}
+
+.fo h2 {
+    color: #9f9999;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.form-group {
+    display: flex;
+    margin: 30px;
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo blanco semitransparente */
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.but {
+    display: flex;
+    justify-content: center;
+}
+
+.form-group label {
+    color: #333;
+    display: block;
+    margin: 10px;
+    font-weight: bold;
+}
+
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    font-size: 16px;
+    color: #333;
+    transition: all 0.3s ease; /* Transición suave */
+}
+
+.form-group select:hover, 
+.form-group select:focus {
+    border-color: #455465;
+    background-color: #a2989866; /* Color de fondo al hover o focus */
+    color: #000000; /* Color del texto al hover o focus */
+}
+
+.create-workout-container button {
+    padding: 10px 20px;
+    background-color: #eaeaee63;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.4s ease, color 0.3s ease; /* Añadir transición al color y fondo */
+    align-self: center;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.create-workout-container button:hover {
+    background-color: #ffffff;
+    color: #333;
+}
+
+.workout-result {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: rgba(244, 244, 244, 0.9);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    white-space: pre-wrap; /* Esto preserva los saltos de línea */
+    color: #333;
+    z-index: 2;
+    position: relative;
+}
+
+.workout-result h2 {
+    margin-bottom: 10px;
+    color: #465b71;
+}
+
+.loader-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.loader-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    z-index: -1;
+}
+
+.loader {
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    border-top: 4px solid #007bff;
+    width: 80px;
+    height: 80px;
+    animation: spin 1s linear infinite;
+}
+
+.workout-table {
+    margin-top: 20px;
+    border-spacing: 0;
+    width: 100%;
+}
+
+.workout-day {
+    margin-bottom: 20px;
+}
+
+.workout-day h3 {
+    margin-bottom: 10px;
+    color: #007bff;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+td {
+    background-color: #fff;
+    color: #555;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@media (max-width: 600px) {
+    .form-group label {
+        width: 100%;
+    }
+    .fo {
+        max-width: 90%;
+    }
+    .workout-result {
+        max-width: 90%;
+    }
+}

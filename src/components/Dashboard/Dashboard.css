@@ -1,0 +1,270 @@
+/* 
+
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 40px;
+    background-color: #f5f7fa;
+    min-height: 80vh;
+    margin-top: 3rem;
+}
+
+.card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card h2::before {
+    /* content: url('path_to_icon');  
+    margin-right: 10px;
+}
+
+.card p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-top: 5px;
+}
+
+.bigstats {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.stat {
+    text-align: center;
+}
+
+.statnum {
+    font-size: 2rem;
+    color: #007bff;
+    font-weight: bold;
+}
+
+.stattext {
+    font-size: 1rem;
+    color: #666;
+}
+
+.card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.card ul li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-top: 1px solid #eee;
+    font-size: 1rem;
+}
+
+.card ul li:first-child {
+    border-top: none;
+}
+
+.card .statnum {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #007bff;
+}
+
+.card .stattext {
+    font-size: 1rem;
+    color: #555;
+}
+ */
+ .dashboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 40px;
+    background-color: #f5f7fa;
+    min-height: 90vh;
+
+}
+
+.card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card h2::before {
+    /* content: url('path_to_icon');  */
+    margin-right: 10px;
+}
+
+.card p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+/* Styling for links */
+.card a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s, background-color 0.3s, padding 0.3s;
+    border-radius: 8px;
+    padding: 5px 10px;
+}
+
+.latest-meal div a{
+    color: #666;
+}
+
+.meal-list a{
+    color: #666;
+}
+
+.card.timer-link {
+    background-color: #ececec; /* Example color */
+}
+
+
+.card a:hover {
+    color: #666;
+    background-color: #ffffff;
+    text-decoration: none;
+}
+
+/* Additional Stats Styling */
+.bigstats {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.stat {
+    text-align: center;
+}
+
+.statnum {
+    font-size: 2rem;
+    color: #007bff;
+    font-weight: bold;
+}
+
+.stattext {
+    font-size: 1rem;
+    color: #666;
+}
+
+.card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.card ul li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-top: 1px solid #eee;
+    font-size: 1rem;
+}
+
+.card ul li:first-child {
+    border-top: none;
+}
+
+/* Specific Styling for Metabolic Rate Card */
+.metabolic-rate {
+    background-color: #ffffff;
+}
+
+.metabolic-rate div p{
+    color: #fff;
+}
+
+.latest-workout{
+background-color: #a5a5a5;
+}
+ .latest-meal {
+    background-color: #ffffff;
+}
+
+.profile {
+    background-color: #a5a5a5;
+
+}
+
+.profile h2{
+    color: #fff;
+}
+
+.latest-workout h2{
+    color: #fff;
+}
+
+.workout-list h2{
+    color: #fff;
+}
+
+.workout-list div a {
+    color: #e5e5e5;
+}
+
+.workout-list{
+    background-color: #a5a5a5;
+}
+ .meal-list {
+    background-color: #ffffff;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        margin-bottom: 20px;
+    }
+}
