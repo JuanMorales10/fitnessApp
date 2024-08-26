@@ -27,7 +27,7 @@
 
 .sidebar {
   position: fixed;
-  top: 60px; /* Altura del navbar */
+  top: 63.5px; /* Altura del navbar */
   left: 0;
   width: 150px;
   height: calc(100% - 60px); /* Altura completa menos el navbar */

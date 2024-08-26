@@ -4,8 +4,9 @@
     background-color: #f5f7fa;
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    margin: 20px auto;
+    margin: 70px auto;
     max-width: 900px;
+    height: 80vh;
 }
 
 .list-container h2 {
@@ -27,7 +28,7 @@
 }
 
 .list-table th {
-    background-color: #007bff;
+    background-color: #506071;
     color: white;
 }
 

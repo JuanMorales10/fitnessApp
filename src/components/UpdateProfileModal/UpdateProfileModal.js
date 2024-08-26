@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom'; // Importa useNavigate
 import './UpdateProfileModal.css';
 
 const UpdateProfileModal = ({ isOpen, onClose }) => {
@@ -11,6 +12,8 @@ const UpdateProfileModal = ({ isOpen, onClose }) => {
         frecuencia: '',
         objetivo: ''
     });
+
+    const navigate = useNavigate(); // Usa useNavigate para la redirección
 
     useEffect(() => {
         const savedData = localStorage.getItem('userProfile');
@@ -30,6 +33,7 @@ const UpdateProfileModal = ({ isOpen, onClose }) => {
         e.preventDefault();
         localStorage.setItem('userProfile', JSON.stringify(form));
         onClose();
+        navigate('/'); // Redirige a la página principal
     };
 
     if (!isOpen) return null;

@@ -26,9 +26,9 @@ body {
 .workout-clock {
   width: 100%;
   max-width: 350px;
-  margin: 20px auto;
-  height: 400px;
+  margin: 70px auto;
   border-radius: 8px;
+  height: 80vh;
 }
 
 .headertimer {
